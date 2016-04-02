@@ -4,5 +4,7 @@ MAINTAINER T. Mieulet <>
 RUN apt-get update && \
     apt-get install -y openconnect  && \
     apt-get clean 
+COPY exe.sh /exe.sh
+RUN chmod 0755 /exe.sh
 
-RUN echo "${PASSWORD}" | openconnect --background --pid-file=/run/openconnect_vpn.pid ${args}
+#ENTRYPOINT ["/exe.sh"]

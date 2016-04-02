@@ -1,3 +1,7 @@
+First, create env.txt with following lines :
+VPN_ARGS=--no-cert-check --authgroup=G1 -u user1  https://vpn.com
+VPN_PASSWORD=Pass
 
+then run 
+docker run  --privileged --env-file ./env.txt -i -t tmieulet/openconnect
 
-docker run --privileged -e args="--no-cert-check --authgroup=GROUP1 -u user  https://vpn.com" -e PASSWORD=9999187428 -t tmieulet/openconnect
