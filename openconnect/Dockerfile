@@ -7,4 +7,4 @@ RUN apt-get update && \
 COPY exe.sh /exe.sh
 RUN chmod 0755 /exe.sh
 
-#ENTRYPOINT ["/exe.sh"]
+ENTRYPOINT ["/exe.sh"]
